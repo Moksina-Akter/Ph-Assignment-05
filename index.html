@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom project</title>
+
+    <!-- tailwind+daisy link -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+     <!-- google font  -->
+
+     <!-- hind-madurai  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+      <!-- inter  -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+      
+       <!-- roboto  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      
+      <style>
+        .hind-madurai{
+            font-family: "Hind Madurai", sans-serif;
+        }
+        .inter{
+            font-family: "Inter", sans-serif;
+        }
+        .roboto{
+            font-family: "Roboto", sans-serif;
+
+        }
+      </style>
 </head>
-<body>
-    
+<body class="w-11/12 mx-auto" >
+    <header>
+        <!-- nav  -->
+        <nav class="md:flex justify-between items-center mt-5">
+            <div class="flex items-center gap-2">
+               <div class="">
+                 <img class="w-14" src="./assets/logo.png" alt="">
+               </div>
+               <h1 class="text-[#006747] text-xl font-bold">Emergency <br>Service</h1>
+            </div>
+            <!--nav button  -->
+            <div class="flex space-x-2 inter">
+               <button class="bg-[#41FF6B1A] flex justify-between items-center px-5 py-1 rounded-2xl space-x-2 font-bold"><span>0</span><img class="w-5" src="./assets/heart.png" alt=""></button>
+
+               <button class="bg-[#41FF6B1A] flex justify-between items-center px-4 py-1 rounded-2xl space-x-2 font-bold"><span>100</span><img class="w-5" src="./assets/coin.png" alt=""></button>
+
+               <button class="bg-[#00A63E] text-[#FFFFFF] px-4 py-1 rounded-2xl space-x-2"><span>2</span> Copy</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script src="./index.js"></script>
 </body>
 </html>
