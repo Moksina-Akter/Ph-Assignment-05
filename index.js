@@ -23,26 +23,21 @@ for (const copies of copy) {
     count++;
     getElement('copied').innerText = count;
 
-    const card = copies.closest ('.card');
-    const number = card.getElementsByClassName ('number')[0].innerText;
+    const  cardNumber=copies.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
 
-    navigator.clipboard.writeText(number);
+    navigator.clipboard.writeText(cardNumber);
 
-    alert(`নম্বর কপি হয়েছে : ${number}` )
+    alert(`নম্বর কপি হয়েছে : ${cardNumber}` )
 })
 }
 
 
-
-// calling event
+//calling event
 const calls = document.querySelectorAll('.callBtn');
-
 for (const call of calls) {
   call.addEventListener('click', function () {
-    const card = call.closest('.card'); 
-    const cardHeading = card.getElementsByClassName('cardHeading')[0].innerText;
-    const cardNumber = card.getElementsByClassName('number')[0].innerText;
-    
+    const  cardHeading= call.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
+    const  cardNumber= call.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
 
     const starElement = getElement('starDecrease');
     let starValue = parseInt(starElement.innerText);
