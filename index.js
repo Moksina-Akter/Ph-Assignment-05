@@ -1,5 +1,5 @@
 
-
+//common function
 function getElement(id) {
   const element = document.getElementById(id);
   return element;
@@ -23,7 +23,6 @@ for (const copies of copy) {
     count++;
     getElement('copied').innerText = count;
 
-    //copied
     const card = copies.closest ('.card');
     const number = card.getElementsByClassName ('number')[0].innerText;
 
@@ -35,7 +34,7 @@ for (const copies of copy) {
 
 
 
-
+// calling event
 const calls = document.querySelectorAll('.callBtn');
 
 for (const call of calls) {
@@ -75,7 +74,6 @@ for (const call of calls) {
       `;
       div.append(newDiv);
 
-
       alert(`📞 Calling ${cardHeading} ${cardNumber}`);
 
     } 
@@ -87,5 +85,11 @@ for (const call of calls) {
 };
 
 
+//button clear
+getElement('clearBtn').addEventListener('click', function(){
+   const div = getElement('card-container');
+   div.innerHTML = "";
 
+})
 
+  
