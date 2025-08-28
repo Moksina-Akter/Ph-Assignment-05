@@ -22,26 +22,18 @@ for (const copies of copy) {
      copies.addEventListener('click', function (){
     count++;
     getElement('copied').innerText = count;
+
+    //copied
+    const card = copies.closest ('.card');
+    const number = card.getElementsByClassName ('number')[0].innerText;
+
+    navigator.clipboard.writeText(number);
+
+    alert('')
 })
 }
 
 
-//calling count 
-/*
-const calls = document.querySelectorAll('.callBtn');
-for (const call of calls) {
-    call.addEventListener('click', function (){
-     
-        const cardHeading =document.getElementsByClassName('cardHeading')[0].innerText;
-        const cardNumber =document.getElementsByClassName('number')[0].innerText;
-
-
-        console.log(cardHeading,cardNumber)
-        alert(`Calling ${cardHeading} ${cardNumber}`);
-
-    })
-}
-*/
 
 
 const calls = document.querySelectorAll('.callBtn');
@@ -51,17 +43,17 @@ for (const call of calls) {
     const card = call.closest('.card'); 
     const cardHeading = card.getElementsByClassName('cardHeading')[0].innerText;
     const cardNumber = card.getElementsByClassName('number')[0].innerText;
-
-    alert(`Calling ${cardHeading} ${cardNumber}`);
+    
 
     const starElement = getElement('starDecrease');
     let starValue = parseInt(starElement.innerText);
     starValue = starValue - 20 ;
+    
+    
+    if (starValue >= 0 ) {
 
-     if (starValue < 0) starValue = 0;
-        starElement.innerText = starValue;
-
-
+      starElement.innerText = starValue;
+      
       const time = new Date ();  
       const hours = time.getHours()
       const minutes = time.getMinutes()
@@ -82,22 +74,18 @@ for (const call of calls) {
       
       `;
       div.append(newDiv);
-      
 
+
+      alert(`📞 Calling ${cardHeading} ${cardNumber}`);
+
+    } 
+    else {
+      alert('❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।')
+    }
+    
   });
 };
 
 
 
-/*
-*appent tag:
-    <div class="bg-[#fafafa] rounded-md p-5 mt-3">
-        <h1 class="inter font-semibold">Fire Service Number</h1>
-        <div class="hind-madurai flex justify-between text-[#5c5c5c]">
-            <h4 >999</h4>
-            <p>11:36:58 AM</p>           
-        </div>
-    </div>
 
-*/ 
-                     
