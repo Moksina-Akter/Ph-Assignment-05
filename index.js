@@ -29,7 +29,7 @@ for (const copies of copy) {
 
     navigator.clipboard.writeText(number);
 
-    alert('')
+    alert(`নম্বর কপি হয়েছে : ${number}` )
 })
 }
 
