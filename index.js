@@ -70,7 +70,7 @@ for (const call of calls) {
       `;
       div.append(newDiv);
 
-      alert(`📞 Calling ${cardHeading} ${cardNumber}`);
+      alert(`📞 Calling ${cardHeading} : ${cardNumber}`);
 
     } 
     else {
