@@ -85,7 +85,7 @@ for (const call of calls) {
 getElement('clearBtn').addEventListener('click', function(){
    const div = getElement('card-container');
    div.innerHTML = "";
-
+   
 })
 
   
