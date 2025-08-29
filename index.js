@@ -6,24 +6,25 @@ function getElement(id) {
 }
 
 // heart count
-let count = 0;
+let heartCount = 0;
 const countDisplay = document.querySelectorAll('.heartClick');
 for (const counts of countDisplay) {
      counts.addEventListener('click', function (){
-    count++;
-    getElement('heartCount').innerText = count;
+    heartCount++;
+    getElement('heartCount').innerText = heartCount;
 })
 }
 
 
 // copy count
+let copyCount = 0;
 const copy = document.querySelectorAll('.copyBtn');
 for (const copies of copy) {
      copies.addEventListener('click', function (){
-    count++;
-    getElement('copied').innerText = count;
+     copyCount++;
+    getElement('copied').innerText = copyCount;
 
-    const  cardNumber=copies.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
+    const cardNumber=copies.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
 
     navigator.clipboard.writeText(cardNumber);
 
@@ -88,3 +89,4 @@ getElement('clearBtn').addEventListener('click', function(){
 })
 
   
+
